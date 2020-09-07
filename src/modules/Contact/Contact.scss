@@ -1,0 +1,36 @@
+$contact-form-border-color: #3e3e3e;
+$contact-form-text-color: #fff;
+$contact-form-border-radius: 6px;
+$contact-form-padding: 10px;
+
+.contact-form {
+  width: 600px;
+  border: 1px solid $contact-form-border-color;
+  border-radius: $contact-form-border-radius;
+  padding: 1px;
+  margin: auto;
+
+  header {
+    background: $contact-form-border-color;
+    color: $contact-form-text-color;
+    border-radius: $contact-form-border-radius $contact-form-border-radius 0 0;
+    padding: $contact-form-padding;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    padding: 5px;
+  }
+
+  .submit {
+    grid-column-start: 2;
+  }
+}
