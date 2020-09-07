@@ -1,26 +1,26 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.scss";
+import { Link } from "react-router-dom";
 
-function App() {
+export default function App() {
+  const getLinks = () => {
+    return (
+      <React.Fragment>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/contact-us">Contact Us</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+      </React.Fragment>
+    );
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <nav>
+      <ul>{getLinks()}</ul>
+    </nav>
   );
 }
-
-export default App;
