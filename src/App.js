@@ -6,13 +6,13 @@ export default function App() {
     return (
       <React.Fragment>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">React Functional Component</Link>
         </li>
         <li>
-          <Link to="/contact-us">Contact Us</Link>
+          <Link to="/contact-us">Controlled Form Elements</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/about">Context</Link>
         </li>
       </React.Fragment>
     );
