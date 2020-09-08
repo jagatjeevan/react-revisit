@@ -4,12 +4,15 @@ import { Switch, Route } from "react-router-dom";
 import Loading from "./modules/shared/Loading/Loading";
 const Home = React.lazy(() => import("./modules/Home/Home"));
 const ContactUs = React.lazy(() => import("./modules/Contact/Contact"));
+const About = React.lazy(() => import("./modules/About/About"));
 
 export default function Routes() {
   return (
     <Switch>
       <Route path="/about">
-        <About />
+        <Suspense fallback={<Loading />}>
+          <About />
+        </Suspense>
       </Route>
       <Route path="/contact-us">
         <Suspense fallback={<Loading />}>
@@ -23,8 +26,4 @@ export default function Routes() {
       </Route>
     </Switch>
   );
-}
-
-function About() {
-  return <h2>About</h2>;
 }
