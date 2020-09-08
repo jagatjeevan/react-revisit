@@ -14,7 +14,8 @@ export class AboutDescription extends Component {
         data-testid="AboutDescription"
         style={{ background: background, color: text }}
       >
-        AboutDescription Component
+        AboutDescription Component. Using this type would not be possible in
+        functional compoennt.
       </div>
     );
   }

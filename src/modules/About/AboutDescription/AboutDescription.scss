@@ -4,3 +4,13 @@
   border-radius: 6px;
   display: inline-block;
 }
+
+ul.about-description {
+  display: block;
+  margin-bottom: 0;
+
+  li {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+}
