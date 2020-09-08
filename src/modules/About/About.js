@@ -4,13 +4,16 @@ import "./About.scss";
 import ThemeContextProvider from "./context/ThemeContext";
 import SomePara from "./SomePara";
 import ToggleTheme from "./ToggleTheme";
+import { AuthContextProvider } from "./context/AuthContext";
 
 const About = () => {
   return (
     <ThemeContextProvider>
-      <SomePara />
-      <AboutDescription />
-      <ToggleTheme />
+      <AuthContextProvider>
+        <SomePara />
+        <AboutDescription />
+        <ToggleTheme />
+      </AuthContextProvider>
     </ThemeContextProvider>
   );
 };
