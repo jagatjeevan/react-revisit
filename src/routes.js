@@ -2,6 +2,8 @@ import React, { Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Loading from "./modules/shared/Loading/Loading";
+import ErrorBoundaries from "./modules/ErrorBoundaries/ErrorBoundaries";
+import ErrorBoundary from "./modules/shared/ErrorBoundary/ErrorBoundary";
 const Home = React.lazy(() => import("./modules/Home/Home"));
 const ContactUs = React.lazy(() => import("./modules/Contact/Contact"));
 const About = React.lazy(() => import("./modules/About/About"));
@@ -17,6 +19,13 @@ export default function Routes() {
       <Route path="/contact-us">
         <Suspense fallback={<Loading />}>
           <ContactUs />
+        </Suspense>
+      </Route>
+      <Route path="/error-boundary">
+        <Suspense fallback={<Loading />}>
+          <ErrorBoundary>
+            <ErrorBoundaries />
+          </ErrorBoundary>
         </Suspense>
       </Route>
       <Route path="/">

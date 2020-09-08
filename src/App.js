@@ -14,6 +14,9 @@ export default function App() {
         <li>
           <Link to="/about">Context</Link>
         </li>
+        <li>
+          <Link to="/error-boundary">Error Boundary</Link>
+        </li>
       </React.Fragment>
     );
   };

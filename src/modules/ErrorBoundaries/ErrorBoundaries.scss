@@ -1,6 +1,6 @@
 @import "../../variables";
 
-.contact-form {
+.topic-container {
   width: 600px;
   border: 1px solid $contact-form-border-color;
   border-radius: $contact-form-border-radius;
@@ -14,20 +14,7 @@
     padding: $contact-form-padding;
   }
 
-  form {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    grid-gap: 10px;
+  .topic-body {
     padding: 10px;
-  }
-
-  input[type="text"],
-  input[type="tel"],
-  input[type="email"] {
-    padding: 5px;
-  }
-
-  .submit {
-    grid-column-start: 2;
   }
 }
