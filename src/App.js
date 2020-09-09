@@ -17,6 +17,9 @@ export default function App() {
         <li>
           <Link to="/error-boundary">Error Boundary</Link>
         </li>
+        <li>
+          <Link to="/portals">Portals</Link>
+        </li>
       </React.Fragment>
     );
   };
