@@ -6,9 +6,8 @@ import Home from "./Home";
 describe("<home />", () => {
   test("it should mount", () => {
     render(<Home />);
-
     const home = screen.getByTestId("home");
-
     expect(home).toBeInTheDocument();
+    
   });
 });

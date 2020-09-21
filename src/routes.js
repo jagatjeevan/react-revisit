@@ -13,6 +13,9 @@ const ErrorBoundary = React.lazy(() =>
   import("./modules/shared/ErrorBoundary/ErrorBoundary")
 );
 const Portals = React.lazy(() => import("./modules/Portals/Portals"));
+const UseReducerHook = React.lazy(() =>
+  import("./modules/UseReducerHook/UseReducerHook")
+);
 
 export default function Routes() {
   return (
@@ -30,6 +33,11 @@ export default function Routes() {
       <Route path="/contact-us">
         <Suspense fallback={<Loading />}>
           <ContactUs />
+        </Suspense>
+      </Route>
+      <Route path="/use-reducer-hook">
+        <Suspense fallback={<Loading />}>
+          <UseReducerHook />
         </Suspense>
       </Route>
       <Route path="/error-boundary">

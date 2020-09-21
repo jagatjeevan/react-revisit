@@ -21,10 +21,14 @@ class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
-      return <div>There is some error in the component</div>;
+      return (
+        <div data-testid="ErrorBoundary">
+          There is some error in the component
+        </div>
+      );
     }
 
-    return this.props.children;
+    return <div data-testid="ErrorBoundary">{this.props.children}</div>;
   }
 }
 

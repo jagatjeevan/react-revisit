@@ -3,7 +3,7 @@ import "./loading.scss";
 
 const Loading = () => (
   <div className="loading" data-testid="loading">
-    loading Component ...
+    Loading Component ...
   </div>
 );
 
